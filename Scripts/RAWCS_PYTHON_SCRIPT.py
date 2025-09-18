@@ -4,6 +4,7 @@ import time
 from ssd1306 import SSD1306_I2C
 
 i2c0 = SoftI2C(scl=Pin(9),sda=Pin(8), freq=400000)
+# Setting up i2c interface to display windows state
 display = SSD1306_I2C(128,64,i2c0,addr=0x3c)
 
 # Define motor pins
@@ -95,3 +96,4 @@ while True:
     display.fill(0)
     time.sleep(1)
     
+
